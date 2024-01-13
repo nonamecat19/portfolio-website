@@ -1,8 +1,7 @@
 import React from "react";
 import { FaReact, FaVuejs } from "react-icons/fa";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import jobSearchApp from "@/public/job-search-app.jpg"
+import copyPasteWizard from "@/public/copy-paste-wizard.jpg"
 
 export const links = [
   {
@@ -64,22 +63,18 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
-    description: "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+    title: "Job Search App",
+    description: "Mobile job search application. This is my university course work.",
+    tags: ["React Native", "Expo", "TypeScript", "Zustand", "Express.js", "MongoDB", "Mongoose", "Firebase"],
+    imageUrl: jobSearchApp,
   },
   {
-    title: "rmtDev",
-    description: "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
-  },
-  {
-    title: "Word Analytics",
-    description: "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+    title: "Copy Paste App",
+    description: "This app I made for me and my colleagues at work. A lot of copy paste things such " +
+      "as git accounts, ssh ip and passwords people save in excel or text files. This desktop app " +
+      "improves user experience and stay secure.",
+    tags: ["React", "Tauri", "shadcn/ui", "Zustand"],
+    imageUrl: copyPasteWizard,
   },
 ] as const;
 
