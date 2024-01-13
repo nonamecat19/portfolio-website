@@ -12,21 +12,34 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import {TypeAnimation} from "react-type-animation";
+import {GITHUB_URL, LINKEDIN_URL} from "@/lib/links";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
+  const typeAnimationSequence = [
+    'React',
+    1500,
+    'Vue',
+    1500,
+    'TypeScript',
+    1500,
+    'Node.js',
+    1500
+  ]
+
   const settings = {
     particle: {
       particleCount: 35,
-      color: "#1fd7bc",
+      color: "#10b981",
       minSize: 2,
       maxSize: 5
     },
     velocity: {
-      minSpeed: 0.5,
-      maxSpeed: 0.9
+      minSpeed: 0.2,
+      maxSpeed: 0.4
     },
     opacity: {
       minOpacity: 0,
@@ -55,7 +68,7 @@ export default function Intro() {
               scale: 1.05
             }}
           >
-            <div className="rounded-3xl p-3 bg-white hover:bg-teal-600 duration-500 shadow-xl">
+            <div className="rounded-3xl p-3 bg-white hover:bg-emerald-500 duration-500 shadow-xl">
               <Image
                 src={photo}
                 alt="Portrait"
@@ -75,9 +88,16 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Alexander.</span> I'm a{" "}
-        <span className="font-bold">Full Stack developer</span> with{" "}
-        <span className="font-bold">1 year</span> of experience.
+        <span className="font-bold">Hello, I'm Alexander.</span> <br/> I'm a{" "}
+        <span className="font-bold">Full Stack </span>
+        <TypeAnimation
+          sequence={typeAnimationSequence}
+          wrapper="span"
+          speed={25}
+          className="inline-block font-bold text-emerald-500"
+          repeat={Infinity}
+        />
+        <span>developer</span>
       </motion.h1>
 
       <motion.div
@@ -90,18 +110,18 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none
-          focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition relative w-64 h-16"
+          className="group bg-white dark:bg-gray-900 text-black dark:text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none
+          focus:scale-110 hover:scale-110 dark:hover:bg-gray-950 active:scale-105 transition relative w-64 h-12 borderBlack"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
           }}
         >
-          <div className="absolute z-30 group-hover:text-main">
+          <div className="absolute z-30 group-hover:dark:text-main">
             Contact me here{" "}
           </div>
 
-          <div className="absolute z-0 h-16 w-64 overflow-hidden left-0 rounded-full">
+          <div className="absolute z-0 h-12 w-64 overflow-hidden left-0 rounded-full">
             <ParticleBackground settings={settings}/>
           </div>
 
@@ -121,7 +141,7 @@ export default function Intro() {
 
         <a
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://linkedin.com"
+          href={LINKEDIN_URL}
           target="_blank"
         >
           <BsLinkedin />
@@ -129,7 +149,7 @@ export default function Intro() {
 
         <a
           className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://github.com"
+          href={GITHUB_URL}
           target="_blank"
         >
           <FaGithubSquare />

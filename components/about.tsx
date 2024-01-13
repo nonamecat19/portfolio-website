@@ -19,8 +19,11 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        In 14 years I accidentally found free web programming course... Here starts long travel across web, mobile,
-        game and software development.
+        Highly motivated Full Stack JavaScript developer with
+        experience in outsourcing company with many different projects.
+        Took part in creating and optimising high-load applications. Also
+        worked as a mentor and helped developers switch to project
+        stack.
       </p>
 
     </motion.section>
