@@ -75,10 +75,18 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "Realtime chat app",
+    description: "This app I made on the test week in my company. That was a 5 days challenge from 0 to hero in websockets.",
+    tags: ["React", "NestJS", "Socket.io", "shadcn/ui", "jotai", "MySQL", "Redis", "Docker", "TypeORM"],
+    imageUrl: realtimeChat,
+    github: "https://github.com/nonamecat19/realtime-chat"
+  },
+  {
     title: "Job Search App",
     description: "Mobile job search application. This is my university course work.",
     tags: ["React Native", "Expo", "TypeScript", "Zustand", "Express.js", "MongoDB", "Mongoose", "Firebase"],
     imageUrl: jobSearchApp,
+    github: "https://github.com/nonamecat19/job-search-app-react-native"
   },
   {
     title: "Copy Paste App",
@@ -87,12 +95,7 @@ export const projectsData = [
       "improves user experience and stay secure.",
     tags: ["React", "Tauri", "shadcn/ui", "Zustand"],
     imageUrl: copyPasteWizard,
-  },
-  {
-    title: "Realtime chat app",
-    description: "This app I made on the test week in my company. That was a 5 days challenge from 0 to hero in websockets.",
-    tags: ["React", "NestJS", "Socket.io", "shadcn/ui", "jotai", "MySQL", "Redis", "Docker", "TypeORM"],
-    imageUrl: realtimeChat
+    github: "https://github.com/nonamecat19/copy-paste-wizard"
   }
 ] as const;
 
