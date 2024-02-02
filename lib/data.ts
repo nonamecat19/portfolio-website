@@ -2,6 +2,7 @@ import React from "react";
 import { FaReact, FaVuejs } from "react-icons/fa";
 import jobSearchApp from "@/public/job-search-app.jpg"
 import copyPasteWizard from "@/public/copy-paste-wizard.jpg"
+import realtimeChat from "@/public/realtime-chat.jpg"
 
 export const links = [
   {
@@ -76,6 +77,12 @@ export const projectsData = [
     tags: ["React", "Tauri", "shadcn/ui", "Zustand"],
     imageUrl: copyPasteWizard,
   },
+  {
+    title: "Realtime chat app",
+    description: "This app I made on the test week in my company. That was a 5 days challenge from 0 to hero in websockets.",
+    tags: ["React", "NestJS", "Socket.io", "shadcn/ui", "jotai", "MySQL", "Redis", "Docker", "TypeORM"],
+    imageUrl: realtimeChat
+  }
 ] as const;
 
 export const skillsData = [
