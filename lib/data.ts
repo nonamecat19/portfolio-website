@@ -75,7 +75,7 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "Realtime chat app",
+    title: "Realtime Chat App",
     description: "This app I made on the test week in my company. " +
       "That was a 5-day challenge from 0 to hero in WebSockets.",
     tags: ["React", "NestJS", "Socket.io", "shadcn/ui", "jotai", "MySQL", "Redis", "Docker", "TypeORM"],
