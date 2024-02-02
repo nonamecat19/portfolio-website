@@ -106,6 +106,7 @@ export const skillsData = [
 			"React Native",
 			"Zustand",
 			"Redux-toolkit",
+      "Jotai"
 		],
 	},
 	{
@@ -118,6 +119,10 @@ export const skillsData = [
 			"Python",
 			"FastAPI",
 			"Redis",
+      "TypeORM",
+      "Prisma",
+      "C#",
+      "ASP.Net"
 		],
 	},
 	{
@@ -128,7 +133,8 @@ export const skillsData = [
 			"PM2",
 			"NGINX",
 			"Apache",
-			"Storybook"
+			"Storybook",
+      "Strapi"
 		],
 	},
 ] as const;
