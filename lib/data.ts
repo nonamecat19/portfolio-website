@@ -1,5 +1,5 @@
 import React from "react";
-import { FaReact, FaVuejs } from "react-icons/fa";
+import {FaNodeJs, FaReact, FaVuejs} from "react-icons/fa";
 import jobSearchApp from "@/public/job-search-app.jpg"
 import copyPasteWizard from "@/public/copy-paste-wizard.jpg"
 import realtimeChat from "@/public/realtime-chat.jpg"
@@ -33,6 +33,17 @@ export const links = [
 
 export const experiencesData = [
   {
+    title: "Full Stack JS Developer",
+    location: "Remote",
+    company: "MaybeWorks",
+    type: "Full-time",
+    stack: "React, NestJS",
+    paragraphs: [
+    ],
+    icon: React.createElement(FaNodeJs),
+    date: "January 2024 - Present",
+  },
+  {
     title: "Full Stack JS developer",
     location: "Zhytomyr | On-site",
     company: "4K Soft",
@@ -49,7 +60,7 @@ export const experiencesData = [
   },
   {
     title: "Full Stack Developer",
-    location: "Zhytomyr | Remote",
+    location: "Remote",
     company: "Zhytomyr Polytechnic State University",
     type: "Part-time",
     stack: "React, React Native, Capacitor, ExpressJS, ASP.Net, Postgres",
